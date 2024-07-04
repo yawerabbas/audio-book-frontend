@@ -1,0 +1,216 @@
+:root {
+  --background-light: #f9f9f9;
+  --background-dark: #333;
+  --text-light: #333;
+  --text-dark: #f9f9f9;
+  --card-light: #fff;
+  --card-dark: #444;
+  --border-light: #ddd;
+  --border-dark: #555;
+  --shadow-light: rgba(0, 0, 0, 0.1);
+  --shadow-dark: rgba(0, 0, 0, 0.3);
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--background-light);
+  color: var(--text-light);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark {
+  background-color: var(--background-dark);
+  color: var(--text-dark);
+}
+
+.audiobooks-container {
+  padding: 20px;
+  text-align: center;
+  min-height: 100vh;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.audiobooks-container.light {
+  background-color: var(--background-light);
+  color: var(--text-light);
+}
+
+.audiobooks-container.dark {
+  background-color: var(--background-dark);
+  color: var(--text-dark);
+}
+
+.header {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  height: 100px; 
+}
+
+.header h1 {
+  margin: 0;
+}
+
+.rating-filter {
+  margin-bottom: 20px;
+}
+
+.rating-filter select {
+  width: 150px; 
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.rating-filter select:focus {
+  outline: none;
+  border-color: #66afe9;
+}
+
+/* Style the option for the greater than rating */
+.rating-filter option[value="1"],
+.rating-filter option[value="2"],
+.rating-filter option[value="3"],
+.rating-filter option[value="4"] {
+  color: #666;
+  font-style: italic;
+}
+
+/* Style the selected option */
+.rating-filter option:checked {
+  font-weight: bold;
+}
+
+.mode-toggle-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mode-toggle {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.mode-toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.filters-container {
+  display: flex;
+  justify-content: center;
+}
+
+.filters {
+  display: flex;
+  flex-direction: column;
+}
+
+.search-bar,
+.rating-filter {
+  margin-bottom: 20px;
+}
+
+.search-bar input {
+  padding: 10px;
+  width: 80%; 
+  max-width: 400px;
+  font-size: 16px;
+  border: 1px solid var(--border-light);
+  border-radius: 5px;
+  transition: border-color 0.3s;
+}
+
+body.dark .search-bar input {
+  border-color: var(--border-dark);
+}
+
+.audiobooks-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.audiobook-card {
+  background-color: var(--card-light);
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  overflow: hidden;
+  width: 200px;
+  box-shadow: 0 4px 6px var(--shadow-light);
+  transition: transform 0.2s, background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+
+body.dark .audiobook-card {
+  background-color: var(--card-dark);
+  border: 1px solid var(--border-dark);
+  box-shadow: 0 4px 6px var(--shadow-dark);
+}
+
+.audiobook-card:hover {
+  transform: translateY(-10px);
+}
+
+.audiobook-cover {
+  width: 100%;
+  height: auto;
+}
+
+.audiobook-title {
+  font-size: 18px;
+  margin: 10px 0;
+  color: var(--text-light);
+}
+
+body.dark .audiobook-title {
+  color: var(--text-dark);
+}
+
+.audiobook-author {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+body.dark .audiobook-author {
+  color: var(--text-dark);
+}

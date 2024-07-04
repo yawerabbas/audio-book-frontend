@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/audiobook_frontend/static/css/main.bd34304f.css",
+    "main.js": "/audiobook_frontend/static/js/main.c6220634.js",
+    "static/js/453.419a5d54.chunk.js": "/audiobook_frontend/static/js/453.419a5d54.chunk.js",
+    "index.html": "/audiobook_frontend/index.html",
+    "main.bd34304f.css.map": "/audiobook_frontend/static/css/main.bd34304f.css.map",
+    "main.c6220634.js.map": "/audiobook_frontend/static/js/main.c6220634.js.map",
+    "453.419a5d54.chunk.js.map": "/audiobook_frontend/static/js/453.419a5d54.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bd34304f.css",
+    "static/js/main.c6220634.js"
+  ]
+}

@@ -1,0 +1,86 @@
+.audiobook-details-container {
+  padding: 20px;
+  text-align: center;
+  color: var(--text-light); /* Set default font color */
+}
+
+.audiobook-details-container.dark {
+  color: var(--text-dark); /* Set font color for dark mode */
+}
+.audiobook-details-cover {
+  max-width: 200px; /* Adjust the value as needed */
+  height: auto; /* Maintain aspect ratio */
+}
+/* Add styles for the toggle button */
+.mode-toggle-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.mode-toggle input {
+  display: none;
+}
+.audiobook-details-reviews ul {
+  list-style-type: disc; /* Use disc bullets */
+  /* You can adjust other styles as needed */
+}
+.mode-toggle .slider {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.mode-toggle .slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  background-color: white;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.3s;
+}
+
+.mode-toggle input:checked + .slider {
+  background-color: #2196F3;
+}
+
+.mode-toggle input:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+/* Add styles for the submit buttons */
+.audiobook-form button {
+  background-color: #4CAF50; /* Green */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.audiobook-form button:hover {
+  background-color: #45a049; /* Darker green */
+}
+
+/* Adjust margin for the buttons */
+.audiobook-form button {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.audiobook-form input[type="text"] {
+  width: 30%; /* Set the width to 100% of its container */
+  height: 50px; /* Adjust the height as needed */
+  padding: 10px; /* Add padding for better aesthetics */
+  font-size: 16px; /* Adjust font size as needed */
+  font-family: cursive;
+}
